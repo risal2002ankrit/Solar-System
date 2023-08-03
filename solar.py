@@ -98,6 +98,8 @@ def draw_planets():
 def update_planets():
     toDelete = []
     for planet in data:
+        if planet=="sun":
+            continue
         for oPlanet in data:
             if oPlanet != planet:
                 dx = data[oPlanet]['pos'][0] - data[planet]['pos'][0]
